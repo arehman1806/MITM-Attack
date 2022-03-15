@@ -4,6 +4,7 @@ import time
 from common import *
 from const import *
 
+
 dialog = Dialog('print')
 # while(True):
 #     f = open(BUFFER_DIR+BUFFER_FILE_NAME, "r")
@@ -26,4 +27,9 @@ received = receive_and_decrypt(aes_a, socket_a)
 print('bob said: ' + received)
 
 encrypt_and_send(received, aes_b, socket_b)
+
+received_from_alice = receive_and_decrypt(aes_b, socket_b)
+
+encrypt_and_send(received_from_alice, aes_a, socket_a)
+
 

@@ -10,12 +10,14 @@ dialog = Dialog('print')
 #     print(f.read())
 #     f.close()
 #     time.sleep(0.1)
-os.rename('/tmp/s1829279/buffer', '/tmp/s1829279/buffer1')
-player = 'alice'
-print(player)
-socket, aes = setup(player, BUFFER_DIR, BUFFER_FILE_NAME)
-received = receive_and_decrypt(aes, socket)
-print('bob said: ' + received)
-received = receive_and_decrypt(aes, socket)
+# os.rename('/tmp/s1829279/buffer', '/tmp/s1829279/buffer1')
+player_b = 'bob'
+print(player_b)
+socket_b, aes_b = setup(player_b, BUFFER_DIR, BUFFER_FILE_NAME)
+
+player_a = 'alice'
+socket_a, aes_a = setup(player_a, BUFFER_DIR, BUFFER_FILE_NAME)
+
+received = receive_and_decrypt(aes_a, socket_a)
 print('bob said: ' + received)
 

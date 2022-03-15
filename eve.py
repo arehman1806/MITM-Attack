@@ -15,7 +15,7 @@ player_b = 'bob'
 print(player_b)
 socket_b, aes_b = setup(player_b, BUFFER_DIR, BUFFER_FILE_NAME)
 
-os.rename('/tmp/s1829279/buffer', '/tmp/s1829279/buffer1')
+# os.rename('/tmp/s1829279/buffer', '/tmp/s1829279/buffer1')
 
 player_a = 'alice'
 socket_a, aes_a = setup(player_a, BUFFER_DIR, BUFFER_FILE_NAME)

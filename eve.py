@@ -15,4 +15,7 @@ player = 'alice'
 print(player)
 socket, aes = setup(player, BUFFER_DIR, BUFFER_FILE_NAME)
 received = receive_and_decrypt(aes, socket)
-print(received)
+print('bob said: ' + received)
+received = receive_and_decrypt(aes, socket)
+print('bob said: ' + received)
+

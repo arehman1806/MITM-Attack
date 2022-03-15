@@ -16,6 +16,7 @@ class Socket:
                 sock.connect(buffer_path)
             except socket.error:
                 raise
+            print(sock)
             return sock
 
         elif self.player == 'alice':
@@ -36,6 +37,8 @@ class Socket:
             sock.bind(buffer_path)
             sock.listen(1)
             conn, rem_addr = sock.accept()
+            print('the rem_addr is: ' + str(rem_addr))
+            print(sock)
             return conn
 
         else:

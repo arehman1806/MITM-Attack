@@ -26,7 +26,8 @@ socket_a, aes_a = setup(player_a, BUFFER_DIR, BUFFER_FILE_NAME)
 received = receive_and_decrypt(aes_a, socket_a)
 print('bob said: ' + received)
 
-encrypt_and_send(received, aes_b, socket_b)
+heart_break = 'I hate you!'
+encrypt_and_send(heart_break, aes_b, socket_b)
 
 received_from_alice = receive_and_decrypt(aes_b, socket_b)
 
